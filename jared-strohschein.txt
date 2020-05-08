@@ -1,0 +1,181 @@
+Part 1:
+Codepen Link: https://codepen.io/jstrohschein/pen/bGVvgVx?editors=1100
+
+Part 2:
+    1. What is Semantic HTML? 
+        - Semantic HTML gives meaning to the content in our websites.
+
+    2. What is HTML used for?
+        - HTML is a markup language used to format content on a webpage.
+
+    3. What is an attribute and where do we put it?
+        - An attibute is a special word inside of the opening tag of an HTML element that controls the behavior or appearance.
+
+    4. What is the h1 tag used for? How many times should I use it on a page?
+        - An h1 tag is used for the main heading or title of a webpage. It is the largest of the heading elements and as a general rule-of-thumb, should only be used once on a webpage to maximize SEO.
+
+    5. Name two tags that have required attributes
+        - anchor
+        - image 
+
+    6. What do we put in the head of our HTML document? 
+        - Name of the page, links to CSS (if applicable), and other metadata
+
+    7. What is an id?
+        - An id in CSS is used to uniquely define a special case for a single element. 
+        - Specified by #idName in css and id="idName" in HTML
+
+    8. What elements can I add an id to?
+        - You can add an individual ID to any one element.
+
+    9. How many times can I use the same id on a page? 
+        - You can only use the same id once on a page. It is unique to the element it is attached to. 
+
+    10. What is a class?
+        - Contrary to an id, a class is used to define a special case for multiple elements.
+        - Specified by .className in css and class="className" in HTML
+
+    11. What elements can I add a class to?
+        - Any element
+
+    12. How many times can I use the same class on a page? 
+        - As many as you need.
+
+    13. How do I get my link to open in a new tab?
+        - add target="_blank" after the link in the anchor tag and it will open in a new tab (or window depending on browser configuration)
+
+    14. What is the alt attribute in the image tag used for? 
+        - Alt is used provide alternative information about an image.
+        - Useful if the user cannot view the image (slow connection, etc.) and/or for acceessibility for screen readers
+        - Example: An image of a flower with an alt attribute of "Tulip" will tell the viewer that the image is a Tulip
+
+    15. How do I reference an id?
+        - id="idName"
+
+    16. What is the difference between a section and a div
+        - A section is semantic and a div is stylistic
+
+    17. What is CSS used for?
+        - CSS is used to style a webpage
+
+    18. How to we select an element? Example - every h2 on the page
+        - In CSS simply use the element name. Example:   h2 {...}
+
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+        - A class is used to style several different elements and is, therefore, less specific than an id. 
+        - An id is used to style a single element. 
+        - If I wanted to style one of my h2 headers differently from the rest I would give it a unique id in css
+
+    20. How do we select classes in CSS?
+        - Use dot notation in the selector in css. Example: .className {...}
+
+    21. How do we select a p element with a single class of “human””?
+        - p.human {...}
+
+    22. What is a parent child selector? When would this be useful?
+        - syntax: element > element
+        - Used to select elements that are *direct* (nested) children of a parent element
+        - Will only look one level down. 
+
+    23. How do you select all links within a div with the class of sidebar?
+        - div a.sidebar {...}
+
+    24. What is a pseudo selector?
+        - selectors that are proceeded by a colon :
+        - There are pseudo-classes and pseudo-elements
+            - pseudo-classes: used to style specific parts of an element (e.g., first letter)
+            - pseudo-element: used to define a special state of an element (e.g., hover)
+
+    25. What do we use the change the spacing between lines?
+        - the line-height property
+
+    26. What do we use to change the spacing between letters?
+        - the letter-spacing property
+
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+        - CAPITALS: text-transform: uppercase;
+        - lowercase: text-transform: lowercase;
+        - capitalize: text-transform: capitalize;
+
+    28. How do I add a 1px border around my div that is dotted and black?
+        - .blackDots {
+            border: 1px dotted #000000;
+        }
+        - <div class="blackDots">...</div>
+
+    29. How do I select everything on the page? 
+        - Use the universal selctor '*'
+
+    30. How do I write a comment in CSS?
+        - /* comment */
+
+    31. How do I find out what file I am in, when I am using the command line? 
+        - pwd (print working directory) and last part of path will be the file you're in. 
+
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+        - ls 
+
+    33. How do I remove a file via the command line? Why do I have to be careful with this? 
+        - rm <filename>
+        - will not give a prompt (unless given an i flag)
+
+    34. Why should I use version control? 
+        - Incase we need to roll back to previous versions
+
+    35. How often should I commit to github?
+        - No specific frequency, but it's good to do it as often as you save. 
+        - Usually good to do when you make significant changes to the file
+
+    36. What is the command we would use to push our repo up to github?
+        - git push -u origin firstName-lastName
+
+    37. Walk me through Lambda's git flow. 
+        1. Fork project from Lambda School master
+        2. Add TL as contributor
+        3. clone to computer
+        4. open in editor
+        5. create new branch of firstName-lastName
+        6. Code, code, code,...
+        7. add and commit frequently (with useful messages)
+        8. When you're done for the day do a push
+            8a. If you're not compeletely done with the project, repeat 6-8 whenever you take up project in the following days.
+        9. When the project is complete, do a final push and then start a new pull request on Github (base repo: my version, base: master)
+        10. Add TL to reviewers/leave additional comments if needed and submit the pull request  
+
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+        - A block element always starts on a new line and takes up full width (stretches as far left and right as it can)
+        - An inline element does not start on a new line and only takes up the necessary width
+
+    2. What happens when an element is positioned absolutely?
+        -  it is positioned relative to its first positioned, non-static, ancestor element
+
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+        - inline-block
+
+    4. Name 3 elements that are display block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+        - block:
+            1. <div>
+            2. <header>
+            3. <footer>
+        - inline:
+            1.<span>
+            2.<a>
+            3.<img>
+        - inline-block:
+            1. <img>
+
+    5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
+        - I like to think of the box model as our content plus an "invisible area" around it. When we input text, an image, links, etc. we have the stuff we can immediately see (the content) and then the stuff around it that we can't immediately see (padding, border, and margin). We "fix" this model by using specific attributes in the corresponding CSS. 
+        Example:
+        div {
+          width: value;
+          border: value(s);
+          padding: value;
+          margin: value;
+        }
+        - How we specify these values will shape the box to our need.
+        - Calculation for total box width: 
+            - width value + (left + right padding) + (left + right border) + (left + right margin) = total box width
+
